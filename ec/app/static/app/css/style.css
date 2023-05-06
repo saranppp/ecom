@@ -1,0 +1,46 @@
+body{
+    padding-bottom: 100px;
+}
+.goodnesssecont img{
+    width: 100%;
+}
+.smbg{
+    background-color: #fff;
+    background-image: linear-gradient(rgb(110,69,143,0.1),#fff);
+    background-image: -webkit-linear-gradient(rgb(110,69,143,0.1),#fff);
+    background-image: -moz-linear-gradient(rgb(110,69,143,0.1),#fff);
+    background-image: -ms-linear-gradient(rgb(110,69,143,0.1),#fff);
+    background-image: -o-linear-gradient(rgb(110,69,143,0.1),#fff);
+}
+
+.curbgpro{
+    background-color: #fff;
+    background-image: linear-gradient(rgba(122, 13, 212, 0.1),#fff);
+    background-image: -webkit-linear-gradient(rgba(122, 13, 212, 0.1),#fff);
+    background-image: -moz-linear-gradient(rgba(122, 13, 212, 0.1),#fff);
+    background-image: -ms-linear-gradient(rgb(122, 13, 212, 0.1),#fff);
+    background-image: -o-linear-gradient(rgb(122, 13, 212, 0.1),#fff);
+}
+
+.buttermilk{
+    background-color: #fff;
+    background-image: linear-gradient(rgba(10,77,123,0.1),#fff);
+    background-image: -webkit-linear-gradient(rgba(10,77,123,0.1),#fff);
+    background-image: -moz-linear-gradient(rgba(10,77,123,0.1),#fff);
+    background-image: -ms-linear-gradient(rgb(10,77,123,0.1),#fff);
+    background-image: -o-linear-gradient(rgb(10,77,123,0.1),#fff);
+}
+
+.mlkpro{
+    color: #636362;
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 50px;
+    width:43%;
+    margin:0 auto;
+    text-align: center;
+}
+
+.goodnesssec a{
+    text-decoration:none;
+}
