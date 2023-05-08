@@ -16,6 +16,9 @@ urlpatterns = [
     path('address/',views.address,name='address'),
     path('updateAddress/<int:pk>',views.updateAddress.as_view(),name='updateAddress'),
 
+    path('add_to_cart/',views.add_to_cart,name='add_to_cart'),
+    path('cart/',views.show_cart,name='showcart'),
+    
     path('registration/',views.CustomerRegistrationView.as_view(),name='customerregistration'),
     path('accounts/login/',auth_view.LoginView.as_view(template_name='app/login.html',authentication_form=LoginForm), name='login'),
     path('passwordchange/',auth_view.PasswordChangeView.as_view(template_name='app/passwordchange.html',form_class=MyPasswordResetForm,success_url='/passwordchangedone'), name='passwordchange'),
