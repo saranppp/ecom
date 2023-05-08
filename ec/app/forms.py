@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm,AuthenticationForm,UsernameField,PasswordChangeForm,SetPasswordForm
+from django.contrib.auth.forms import  PasswordResetForm,UserCreationForm,AuthenticationForm,UsernameField,PasswordChangeForm,SetPasswordForm
 from django.contrib.auth.models import User
 from .models import Customer
 
@@ -17,7 +17,7 @@ class CustomerRegistrationForm(UserCreationForm):
         model=User
         fields=['username','email','password1','password2']
 
-class MyPasswordResetForm(PasswordChangeForm):
+class MyPasswordResetForm(PasswordResetForm):
     email=forms.EmailField(widget=forms.EmailInput(attrs={'class':'form-control'}))
 
 class MySetPasswordForm(SetPasswordForm):
