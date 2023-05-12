@@ -20,6 +20,10 @@ urlpatterns = [
     path('cart/',views.show_cart,name='showcart'),
     path('checkout/',views.show_cart,name='checkout'),
     
+    path('pluscart/',views.plus_cart,name='pluscart'),
+    path('minuscart/',views.minus_cart,name='pluscart'),
+    path('removecart/',views.remove_cart,name='pluscart'),
+    
     path('registration/',views.CustomerRegistrationView.as_view(),name='customerregistration'),
     path('accounts/login/',auth_view.LoginView.as_view(template_name='app/login.html',authentication_form=LoginForm), name='login'),
     path('passwordchange/',auth_view.PasswordChangeView.as_view(template_name='app/passwordchange.html',form_class=MyPasswordResetForm,success_url='/passwordchangedone'), name='passwordchange'),
