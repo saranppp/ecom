@@ -114,6 +114,8 @@ def show_cart(request):
 
 class checkout(View):
     def get(self,request):
+        user=request.user
+        add=Customer.objects.filter
         return render(request,'app/checkout.html')
 
 def plus_cart(request):
