@@ -47,3 +47,9 @@ class Cart(models.Model):
     @property
     def total(self):
         return self.quantity*self.product.discounted_price
+    
+
+class Payment(models.Model):
+    user=models.ForeignKey(User,on_delete=models.CASCADE)
+    amount=models.FloatField()
+    
