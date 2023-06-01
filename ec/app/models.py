@@ -52,7 +52,7 @@ STATUS_CHOICES=(
     ('Accepted','Accepted'),
     ('Packed','Packed'),
     ('On the way','On The Way'),
-    ('Delvered','elivered'),
+    ('Delvered','Delivered'),
     ('Cancel','Cancel'),
     ('Pending','Pending'),
     )
