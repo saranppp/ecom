@@ -14,7 +14,9 @@ CATEGORY_CHOICES=(
 )
 
 STATE_CHOICES=(('kerala','kerala'),
-               ('tamil nadu','tamil nadu'))
+               ('tamil nadu','tamil nadu'),
+               ('karnataka','karnaraka')
+               )
 
 class Product(models.Model):
     title=models.CharField(max_length=100)
