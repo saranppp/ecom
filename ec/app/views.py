@@ -7,6 +7,7 @@ from .forms import CustomerRegistrationForm,CustomerProfileForm
 from django.contrib import messages
 import razorpay
 import time
+from django.conf import settings
 
 # Create your views here.
 def home(request):
@@ -122,7 +123,11 @@ class checkout(View):
             value=p.quantity*p.product.discounted_price
             famount=famount+value
         totalamount=famount+40
+        razoramount=int(totalamount*100)
+        client=razorpay.Client(auth=(settings.RAZOR_KEY_ID,settings.RAZOR_KEY_SECRET))
+        data={}
         return render(request,'app/checkout.html',locals())
+         
 
 def plus_cart(request):
     if request.method=='GET':
