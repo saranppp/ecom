@@ -125,9 +125,11 @@ class checkout(View):
         totalamount=famount+40
         razoramount=int(totalamount*100)
         client=razorpay.Client(auth=(settings.RAZOR_KEY_ID,settings.RAZOR_KEY_SECRET))
-        data={}
+        data={'amount':razoramount,'currency':'INR','receipt':'order_receipt_12'}
+        payment_responce=client.order.create(data=data)
+        print(payment_responce)
         return render(request,'app/checkout.html',locals())
-         
+        
 
 def plus_cart(request):
     if request.method=='GET':
