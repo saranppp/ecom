@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect
 from django.db.models import Count,Q
 from django.http import HttpResponse,JsonResponse
 from django.views import View
-from .models import Product,Customer,Cart
+from .models import Product,Customer,Cart,Payment
 from .forms import CustomerRegistrationForm,CustomerProfileForm
 from django.contrib import messages
 import razorpay
@@ -128,6 +128,16 @@ class checkout(View):
         data={'amount':razoramount,'currency':'INR','receipt':'order_receipt_12'}
         payment_responce=client.order.create(data=data)
         print(payment_responce)
+        order_id=payment_responce['id']
+        order_status=payment_responce['status']
+        if order_status=='created':
+            payment=Payment(
+                user=user,
+                amount=totalamount,
+                razorpay_order_id=order_id,
+                razorpay_payment_status=order_status
+            )
+            payment.save()
         return render(request,'app/checkout.html',locals())
         
 
