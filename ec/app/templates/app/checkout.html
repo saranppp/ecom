@@ -62,7 +62,7 @@
 
 <script>
 var options = {
-    "key": "rzp_test_3uk0RiJPK9N29o", // Enter the Key ID generated from the Dashboard
+    "key": "rzp_test_6eRBwJB258lJzn", // Enter the Key ID generated from the Dashboard
     "amount": "{{razoramount}}", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
     "currency": "INR",
     "name": "E-COMMERCE",
@@ -74,7 +74,7 @@ var options = {
         //alert(response.razorpay_payment_id);
         //alert(response.razorpay_order_id);
         //alert(response.razorpay_signature)
-        window.location.href='http://localhost:8000/paymentdone?order_id=${response.razorpay_order_id}&payment_id=${response.razorpay_payment_id}&cust_id=${form.elements[custid].value}'
+        window.location.href='http://127.0.0.1:8000/paymentdone?order_id=${response.razorpay_order_id}&payment_id=${response.razorpay_payment_id}&cust_id=${form.elements[custid].value}'
     },
     "prefill": {
         "name": "Gaurav Kumar",

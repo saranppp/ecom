@@ -140,6 +140,9 @@ class checkout(View):
             payment.save()
         return render(request,'app/checkout.html',locals())
         
+def payment_done(request):
+    order_id=request.GET.get('order_id')
+    
 
 def plus_cart(request):
     if request.method=='GET':
